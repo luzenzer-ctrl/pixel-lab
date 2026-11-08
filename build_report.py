@@ -99,7 +99,7 @@ add(f'學號：{escape(a.student_id)}　　姓名：{escape(a.name)}')
 add('製作日期：2026 年 11 月 8 日')
 add('Python · Streamlit · OpenCV · YuNet','CH2')
 story.append(Spacer(1,16))
-table([['本版狀態','程式與實測已完成；提交資料尚待補齊'],['演算法與介面測試','27 項通過；數值及人臉框資料附於專案'],['公開連結','已填寫，請依 Chapter 2 驗證' if a.demo and a.repo else ('原始碼已公開；Live Demo 尚待部署' if a.repo else '尚未部署／填入；目前無可供老師公開檢閱的網址')],['介面截圖','已偵測到本機截圖檔' if (E/'01_original.png').exists() else '尚待本機擷取；本報告先呈現真實運算結果圖'],['提交前必做',('核對姓名學號' if a.student_id!='待填學號' and a.name!='待填姓名' else '填入姓名學號')+'、補公開連結與操作截圖、確認 AI 模型標示及完整對話']])
+table([['本版狀態','程式與實測已完成；提交資料尚待補齊'],['演算法與介面測試','27 項通過；數值及人臉框資料附於專案'],['公開連結','已填寫，請依 Chapter 2 驗證' if a.demo and a.repo else ('原始碼已公開；Live Demo 尚待部署' if a.repo else '尚未部署／填入；目前無可供老師公開檢閱的網址')],['介面截圖','已補真實介面截圖（GitHub Actions）' if (E/'01_original.png').exists() else '尚待本機擷取；本報告先呈現真實運算結果圖'],['提交前必做',('核對姓名學號' if a.student_id!='待填學號' and a.name!='待填姓名' else '填入姓名學號')+'、補公開連結與操作截圖、確認 AI 模型標示及完整對話']])
 add('閱讀導覽：Chapter 1 環境與專案範圍；Chapter 2 部署與連結；Chapter 3 架構、操作、演算法與測試；Chapter 4 AI 協作紀錄；附錄為原始 Prompt。','SmallC')
 br()
 title('CHAPTER 1','專案概述與環境建置')
@@ -196,8 +196,9 @@ if not existing:
     add('自動截圖腳本已提供，但由於本次瀏覽器連線限制，尚未在真實瀏覽器完整走完；若平台介面結構改變，需依實際畫面調整定位。補圖後務必人工確認截圖中的參數與結果對應。','SmallC')
 else:
     add('以下頁面納入執行 capture_ui.py 後產生的介面截圖；請在提交前確認畫面與參數。')
-    for fn,cap in existing:
-        br();add(cap,'CH1');image(E/fn,caption=f'介面截圖：{fn}')
+    for idx,(fn,cap) in enumerate(existing):
+        if idx:br()
+        add(cap,'CH2' if idx==0 else 'CH1');image(E/fn,caption=f'真實介面截圖：{fn}；來源：GitHub Actions 自動操作與擷取。')
 br()
 title('CHAPTER 4 · 4.1','AI 協作與真實 Prompt 歷程')
 add('協作日期：2026-11-08。工具：ChatGPT Work / Codex。系統自我識別為 GPT-6 系列；本執行環境未提供可核驗的精確子版本 ID。提交前請依 ChatGPT 介面實際模型標示補記，不冒用題目舉例的 GPT-4o 或 Claude 名稱。')
@@ -216,7 +217,7 @@ add('這是可重現的介面測試定位錯誤；修正後維持預期人臉數
 add('其他實際調整','CH2')
 add('查閱 OpenCV 原始文件後，濾波實作明確旋轉核180度；用非對稱核與手寫參考驗證。人臉模組使用模型分數欄位；PSNR 先轉 float64；零和核禁止權重總和正規化。這些是本次 AI 實作選擇與工具驗證，並非後補假想使用者對話。')
 add('遇到的外部限制','CH2')
-add('本機瀏覽器啟動受系統 socket 限制，遠端瀏覽器則無法連線 localhost。保留實測數據，附上本機截圖腳本並標明未完成截圖。初版沒有可用登入狀態建立儲存庫，其後使用者完成 GitHub 授權並建立公開儲存庫；本版已補入原始碼連結。Live Demo 仍未部署，未聲稱通過線上應用 Public 驗收。')
+add('初版本機瀏覽器受系統 socket 限制，遠端瀏覽器亦無法連線 localhost；後續改用 GitHub Actions 在 Ubuntu 24.04 執行 Chromium，完成實際介面操作與五張截圖，並人工檢查畫面後納入本版。初版沒有可用登入狀態建立儲存庫，其後使用者完成 GitHub 授權並建立公開儲存庫；本版已補入原始碼連結。Live Demo 仍未部署，未聲稱通過線上應用 Public 驗收。')
 add('完整性聲明','CH2')
 add('本報告保留原始 Prompt、AI 初始回覆、成果對照與真實除錯摘要；不是平台提供的完整逐字對話匯出，也沒有逐字嵌入每個工具呼叫。老師若要求完全逐字的 AI Audit Trail，請將本次完整對話匯出並附在本報告後，後續修改亦照實追加。學號、姓名、精確模型名稱與公開連結須由使用者核對。')
 add('建議後續提問應針對實際問題，並保留原文、AI回覆與修正驗證；不可把尚未提出的建議 Prompt 寫成過去已執行的紀錄。')
@@ -244,7 +245,7 @@ if (ROOT/'audit/followup.txt').exists():
 def footer(c,doc):
     w,h=doc.pagesize;c.setStrokeColor(teal);c.line(55,h-38,w-55,h-38)
     c.setFont(FONT,8);c.setFillColor(navy);c.drawString(55,h-29,'PIXEL LAB｜影像處理期中專題')
-    c.drawString(55,26,'2026-11-08 · '+('待補公開部署與截圖' if not a.demo or not existing else '提交前請完成無痕驗收'))
+    c.drawString(55,26,'2026-11-08 · '+(('待補公開線上展示' if existing else '待補公開部署與截圖') if not a.demo else '提交前請完成無痕驗收'))
     c.drawRightString(w-55,26,f'{doc.page}')
 output=Path(a.output) if a.output else ROOT/f'{a.student_id}_{a.name}_期中專題.pdf'
 output.parent.mkdir(parents=True,exist_ok=True)

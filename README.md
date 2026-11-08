@@ -53,7 +53,7 @@ python -m pytest -q
 
 ## 產生真實介面截圖
 
-本次環境可執行 Streamlit 與 AppTest，但截圖瀏覽器無法連線本機服務；目前報告未將運算圖冒充介面截圖。
+初版截圖瀏覽器無法連線本機服務；後續已在 GitHub Actions 完成 27 項測試與五張真實介面截圖，並補入報告。
 請先保持應用程式執行，再開另一個終端機：
 
 ```bash
@@ -66,7 +66,7 @@ python capture_ui.py
 若要更新 PDF，安裝 `reportlab` 後執行 `python build_report.py --student-id 學號 --name 姓名 --demo 公開網址 --repo GitHub網址`。
 PDF 生成器會自動納入已存在的介面截圖。未填姓名／網址時明示「待補」。
 
-## 公開部署（尚未代為登入或發佈）
+## 公開部署（原始碼已公開，App 尚待部署）
 
 ### GitHub 原始碼
 
@@ -110,3 +110,8 @@ YuNet 模型來源與 SHA-256 見 `models/MODEL_CARD.md`；隨附來源授權。
 
 `audit/original_prompt.txt` 保留本次使用者完整原始題目；`audit/AI_AUDIT.md` 記錄真實工具輸出與修正。
 此次僅有一輪使用者需求，未虛構多輪使用者 refinement。最終回覆與後續真人操作請另外匯出完整對話留存。
+
+
+## 公開儲存庫狀態
+
+原始碼、相依性、模型、測試圖片已公開上傳。Live Demo 尚待 Streamlit Community Cloud 部署；Actions 的截圖驗證狀態請以該次執行結果為準。

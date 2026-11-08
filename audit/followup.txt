@@ -12,3 +12,13 @@ C113151124 呂政哲 我的gmail帳號有連結github帳號
 第一次雲端流程因ubuntu-latest與Playwright不相容失敗，已改為ubuntu-24.04重跑。
 
 GitHub上的27項測試通過；截圖腳本曾因Streamlit radio原生input隱藏而無法點擊，已改為點選可見的U文字標籤。
+
+後續GitHub Actions已成功通過27項測試並產生5張真實介面截圖；另加上運算完成與圖片解碼等待，以避免截到更新中畫面，並延伸濾波及人臉頁的視窗高度。
+
+其餘使用者補充原文依序：
+已經連結好了
+已連接
+[https://github.com/luzenzer-ctrl/pixel-lab](https://github.com/luzenzer-ctrl/pixel-lab)
+
+程式公開來源：https://github.com/luzenzer-ctrl/pixel-lab
+自動驗證來源：https://github.com/luzenzer-ctrl/pixel-lab/actions/runs/42488025218
