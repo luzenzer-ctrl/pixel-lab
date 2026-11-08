@@ -1,9 +1,9 @@
 {
-  "build_report.py": "bf029d2d59fbc1ef884effb184d53f2d5a3797580e75081366fa42b1934ebce8",
+  "build_report.py": "7f0238bbae363ee2b99e15f9e02f1fbd9af4332fa6c4fe1da1c282c7695cb904",
   "requirements.txt": "3403c63643ed0dab82f1259b73cc0cc3c16fa5356d579ca3bad51c8c114577f3",
   "start_windows.bat": "baa25d2ae3d26cc6acbd7aaef78f56f19a7efa71a7f0b63aef2d902014860448",
   "app.py": "6af04f5f31c4549d1c741ce1d117366b0bf15b256210a0dd9df641fb7e879772",
-  "capture_ui.py": "c70e8507966bdb177c2d03f3b3413d015a1ebff7cc69e42647b0e55248339c84",
+  "capture_ui.py": "679c5a242060d4055415cd5352060bb4e5b3178a39b0f7dd8941598815092c34",
   "core.py": "dbe4a84a7f29b563622f1f96ed39c2b2425f6196805a9b41c7b569f9afb633be",
   "pytest.ini": "b160d82f7811555051f8966d8e02750a985227c1d022208c784e606946f2eada",
   "README.md": "c51aeb222f425dacbf413cc6aa4d12fdeff2194640124ebb7bea01b72d63aa13",
@@ -23,7 +23,7 @@
   "models/face_detection_yunet_2023mar.onnx": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
   "models/LICENSE-OpenCV-Zoo": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
   "audit/AI_AUDIT.md": "22e4d168e16fb5116dfb7012ec981fa9d114e30c6eb5c1c9bf1bff238ca99a1b",
-  "audit/followup.txt": "65cf175937ca9977d9e10f51dc3fa51ac44b59062c3e265cdb39417c560212b8",
+  "audit/followup.txt": "29cb3ff7ba1a98e73b550b02913d4cd2929b7a38833e913500da4e4781d70e63",
   "audit/original_prompt.txt": "3aa9b1ab84bbf46d7a610787e28f54e0babe61144d844ff15447a9a2e222fc70",
   "evidence/result_sharpen.png": "3842ecfb82aa2cc41c69f360f11fa6eae9d728a2709994913a7c28a57d678e0d",
   "evidence/filters_grid.png": "e176d6453204d86ea109f5743379583522bfea96c6b9d807f565ad6dd91a020e",
@@ -40,5 +40,5 @@
   "fonts/NotoSansTC-Regular.ttf": "36b19334f4a028626f809902bd7e5fbe881b56bf9f905bd288b95e8686d57aea",
   "fonts/OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
   ".streamlit/config.toml": "159ac2009f01bc9500b8813bf1bea1da928770f5171355c12ea61796156f3459",
-  ".github/workflows/verify.yml": "2486aff1f7aa34e90f6f8b3de95512c872e242e4c483962b78e3f17ffe1fb4aa"
+  ".github/workflows/verify.yml": "ffeed563db30f00bdef91a9019f74675e840ab0d5a93ef3c0eb6624fd00535ee"
 }

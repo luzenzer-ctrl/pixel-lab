@@ -6,3 +6,9 @@ C113151124 呂政哲 我的gmail帳號有連結github帳號
 將報告學號、姓名及檔名更新為 C113151124_呂政哲_期中專題.pdf。
 檢查可用整合後，GitHub 尚未在此對話環境完成安裝與授權；已提供連接途徑。
 使用相同 Gmail 登入 GitHub 不代表本對話已取得 GitHub 權限，故未聲稱已建立儲存庫或公開部署。
+
+後續進度：使用者完成 GitHub 連接，並提供 https://github.com/luzenzer-ctrl/pixel-lab 。
+已於2026-11-08上傳完整原始碼、YuNet模型、公開領域範例及GitHub Actions驗證流程。
+第一次雲端流程因ubuntu-latest與Playwright不相容失敗，已改為ubuntu-24.04重跑。
+
+GitHub上的27項測試通過；截圖腳本曾因Streamlit radio原生input隱藏而無法點擊，已改為點選可見的U文字標籤。

@@ -24,6 +24,7 @@ jobs:
       - name: Capture real app screenshots
         run: python capture_ui.py
       - name: Upload screenshots and evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: pixel-lab-ui-evidence

@@ -27,7 +27,7 @@ try:
         page.get_by_test_id('stImage').first.wait_for()
         page.get_by_role('tab',name='色彩與直方圖',exact=True).click()
         page.screenshot(path=str(out/'01_original.png'),full_page=True)
-        page.get_by_role('radio',name='U',exact=True).check()
+        page.get_by_text('U',exact=True).click()
         page.get_by_text('U｜通道強度圖',exact=True).wait_for()
         page.screenshot(path=str(out/'02_yuv.png'),full_page=True)
         page.get_by_role('tab',name='自訂卷積與 PSNR',exact=True).click()
