@@ -25,7 +25,7 @@ except (ValueError,OSError) as e:
     st.error(str(e)); st.stop()
 cols=st.columns(4)
 for col,label,value in zip(cols,['影像解析度','處理維度','檔案大小','來源格式'],
-        [f"{meta['width']} × {meta['height']}",'3 channels / uint8',f"{meta['bytes']/1024:.1f} KiB",f"{meta['format']} / {meta['source_mode']}"]):
+        [f"{meta['width']} × {meta['height']}",'RGB / uint8',f"{meta['bytes']/1024:.1f} KiB",f"{meta['format']} / {meta['source_mode']}"]):
     col.metric(label,value)
 st.caption(f"來源通道數：{meta['source_channels']}；目前陣列形狀：{rgb.shape}。解析度依 EXIF 方向校正後顯示。")
 tab1,tab2,tab3=st.tabs(['色彩與直方圖','自訂卷積與 PSNR','人臉分析'])
