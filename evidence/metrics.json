@@ -1,0 +1,63 @@
+{
+  "filters": [
+    {
+      "name": "identity",
+      "mse": 0.0,
+      "psnr_db": null,
+      "divisor": 1.0,
+      "clipped_fraction": 0.0
+    },
+    {
+      "name": "gaussian",
+      "mse": 13.922626886145405,
+      "psnr_db": 36.69359176274031,
+      "divisor": 16.0,
+      "clipped_fraction": 0.0
+    },
+    {
+      "name": "sharpen",
+      "mse": 25.487407407407407,
+      "psnr_db": 34.06754699816881,
+      "divisor": 1.0,
+      "clipped_fraction": 0.012897805212620028
+    },
+    {
+      "name": "emboss",
+      "mse": 10384.200627572016,
+      "psnr_db": 7.96707290559755,
+      "divisor": 1.0,
+      "clipped_fraction": 0.48410150891632375
+    }
+  ],
+  "faces": {
+    "color": [],
+    "face": [
+      {
+        "id": 1,
+        "x": 178,
+        "y": 63,
+        "width": 90,
+        "height": 113,
+        "confidence": 0.9323273301124573
+      }
+    ],
+    "two_faces": [
+      {
+        "id": 1,
+        "x": 178,
+        "y": 63,
+        "width": 90,
+        "height": 113,
+        "confidence": 0.932327389717102
+      },
+      {
+        "id": 2,
+        "x": 690,
+        "y": 63,
+        "width": 90,
+        "height": 113,
+        "confidence": 0.9323273301124573
+      }
+    ]
+  }
+}
